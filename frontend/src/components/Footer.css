@@ -1,0 +1,360 @@
+/* =====================================================
+   DAILYCODE FOOTER
+===================================================== */
+
+.footer {
+  width: 100%;
+  background: #080d1b;
+  padding: 45px 20px 25px;
+  color: #cbd5e1;
+  text-align: center;
+  border-top: 1px solid rgba(0, 174, 255, 0.18);
+  box-sizing: border-box;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   LEFT LOGO IMAGE
+===================================================== */
+
+.footer-logo-icon {
+  width: 155px;
+  height: 155px;
+
+  object-fit: contain;
+
+  display: block;
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   RIGHT LOGO CONTENT
+===================================================== */
+
+.footer-logo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+/* =====================================================
+   DAILY CODE
+===================================================== */
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 4rem;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  white-space: nowrap;
+}
+
+
+/* Daily */
+
+.footer-daily {
+  color: #00aaff;
+}
+
+
+/* Code */
+
+.footer-code {
+  color: #ffffff;
+
+  margin-left: 30px;
+}
+
+
+/* =====================================================
+   TAGLINE
+===================================================== */
+
+.footer-tagline {
+  margin-top: 13px;
+
+  color: #7183a5;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 1.15rem;
+  font-weight: 500;
+
+  letter-spacing: 6px;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   NAVIGATION LINKS
+===================================================== */
+
+.footer-links {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 35px;
+
+  margin: 25px 0;
+  padding: 0;
+}
+
+
+.footer-links li {
+  margin: 0;
+  padding: 0;
+}
+
+
+.footer-links a {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #cbd5e1;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 1.05rem;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.footer-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  background: #00aaff;
+
+  transition: width 0.3s ease;
+}
+
+
+.footer-links a:hover {
+  color: #00aaff;
+
+  transform: translateY(-2px);
+}
+
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 28px 0;
+}
+
+
+.footer-social button {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 174, 255, 0.25);
+
+  border-radius: 50%;
+
+  background: rgba(0, 174, 255, 0.05);
+
+  color: #cbd5e1;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+.footer-social button:hover {
+  color: #00aaff;
+
+  border-color: #00aaff;
+
+  background: rgba(0, 174, 255, 0.1);
+
+  box-shadow:
+    0 0 8px rgba(0, 174, 255, 0.3),
+    0 0 18px rgba(0, 174, 255, 0.15);
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.footer-copy {
+  margin: 25px 0 0;
+
+  color: #718096;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 35px 15px 22px;
+  }
+
+
+  .footer-logo {
+    gap: 15px;
+  }
+
+
+  .footer-logo-icon {
+    width: 95px;
+    height: 95px;
+  }
+
+
+  .footer-brand {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+
+
+  .footer-code {
+    margin-left: 15px;
+  }
+
+
+  .footer-tagline {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+  }
+
+
+  .footer-links {
+    gap: 20px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .footer-logo {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+
+  .footer-logo-icon {
+    width: 85px;
+    height: 85px;
+  }
+
+
+  .footer-logo-content {
+    align-items: center;
+  }
+
+
+  .footer-brand {
+    font-size: 2.2rem;
+    justify-content: center;
+  }
+
+
+  .footer-code {
+    margin-left: 12px;
+  }
+
+
+  .footer-tagline {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+
+  .footer-links {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+
+  .footer-social {
+    margin: 22px 0;
+  }
+
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,713 @@
+/* =====================================================
+   BASE RESET
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100%;
+
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #080d1b;
+}
+
+
+/* =====================================================
+   HOME PAGE
+===================================================== */
+
+.homepage {
+  min-height: 100vh;
+
+  padding-top: 70px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(26, 65, 100, 0.75),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 170, 255, 0.06),
+      transparent 40%
+    ),
+    #080d1b;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  min-height: calc(100vh - 70px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 4rem;
+
+  padding: 4rem;
+
+  position: relative;
+
+  flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(0, 153, 255, 0.14);
+
+  filter: blur(120px);
+
+  border-radius: 50%;
+
+  top: -15%;
+  left: -12%;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   HERO TEXT
+===================================================== */
+
+.hero-text {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1 1 500px;
+
+  max-width: 650px;
+
+  color: white;
+
+  animation: fadeUp 0.8s ease;
+}
+
+
+/* =====================================================
+   FADE ANIMATION
+===================================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.title {
+  margin: 0 0 1.2rem;
+
+  font-size: clamp(
+    2.8rem,
+    6vw,
+    4.5rem
+  );
+
+  font-weight: 900;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+
+/* DailyCode */
+
+.accent {
+  color: #4dabff;
+
+  display: inline-block;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.subtitle {
+  max-width: 62ch;
+
+  margin: 0 0 2rem;
+
+  font-size: clamp(
+    1rem,
+    1.5vw,
+    1.2rem
+  );
+
+  line-height: 1.7;
+
+  color: #dbe4ef;
+
+  opacity: 0.95;
+}
+
+
+.subtitle strong {
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   CTA ROW
+===================================================== */
+
+.cta-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.2rem;
+
+  flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   COMMON BUTTON ARROW
+===================================================== */
+
+.arrow {
+  font-size: 1.2rem;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+/* =====================================================
+   START CODING BUTTON
+===================================================== */
+
+.cta {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 180px;
+
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #007bff,
+      #38bdf8
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0, 153, 255, 0.3);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.cta:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #008cff,
+      #4dc7ff
+    );
+
+  box-shadow:
+    0 12px 40px
+    rgba(0, 153, 255, 0.45);
+}
+
+
+.cta:hover .arrow {
+  transform: translateX(4px);
+}
+
+
+.cta:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   LEARN MORE BUTTON
+===================================================== */
+
+.learn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 180px;
+
+  padding: 12px 28px;
+
+  border: 2px solid #38bdf8;
+
+  border-radius: 12px;
+
+  background:
+    rgba(56, 189, 248, 0.05);
+
+  color: #ffffff !important;
+
+  font-family: inherit;
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+
+  text-decoration: none !important;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    all 0.35s ease;
+}
+
+
+/* IMPORTANT:
+   Prevent browser visited/default
+   link color
+*/
+
+.learn:link,
+.learn:visited,
+.learn:hover,
+.learn:active {
+  text-decoration: none !important;
+}
+
+
+/* Idle */
+
+.learn:link,
+.learn:visited {
+  color: #ffffff !important;
+}
+
+
+/* Hover */
+
+.learn:hover {
+  background: #38bdf8;
+
+  color: #08111f !important;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(56, 189, 248, 0.4);
+}
+
+
+.learn:hover .arrow {
+  transform: translateX(4px);
+
+  color: #08111f;
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1 1 400px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  animation: fadeUp 1s ease;
+}
+
+
+.hero-image img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 500px;
+
+  height: auto;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 18px 40px
+    rgba(0, 0, 0, 0.5);
+
+  transform:
+    perspective(800px)
+    rotateY(-8deg);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.hero-image img:hover {
+  transform:
+    perspective(800px)
+    rotateY(0deg)
+    scale(1.02);
+
+  box-shadow:
+    0 22px 50px
+    rgba(0, 170, 255, 0.12);
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    padding: 3rem 2.5rem;
+
+    gap: 2.5rem;
+  }
+
+
+  .hero-text {
+    flex-basis: 450px;
+  }
+
+
+  .hero-image {
+    flex-basis: 350px;
+  }
+
+
+  .hero-image img {
+    max-width: 420px;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .homepage {
+    padding-top: 70px;
+  }
+
+
+  .hero {
+    min-height: auto;
+
+    flex-direction: column-reverse;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+      3.5rem
+      1.5rem
+      4rem;
+
+    gap: 3rem;
+  }
+
+
+  .hero-text {
+    width: 100%;
+
+    max-width: 700px;
+
+    flex: none;
+  }
+
+
+  .title {
+    font-size:
+      clamp(
+        2.5rem,
+        8vw,
+        4rem
+      );
+  }
+
+
+  .subtitle {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .cta-row {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+
+  .hero-image {
+    width: 100%;
+
+    flex: none;
+  }
+
+
+  .hero-image img {
+    width: min(
+      90%,
+      450px
+    );
+
+    transform: none;
+  }
+
+
+  .hero-image img:hover {
+    transform: scale(1.02);
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding:
+      2.5rem
+      1.2rem
+      3rem;
+
+    gap: 2.2rem;
+  }
+
+
+  .title {
+    font-size:
+      clamp(
+        2.2rem,
+        11vw,
+        3rem
+      );
+
+    letter-spacing: -1px;
+
+    line-height: 1.1;
+  }
+
+
+  .subtitle {
+    font-size: 1rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 1.7rem;
+  }
+
+
+  /* ==========================================
+     BUTTONS STACK VERTICALLY
+  ========================================== */
+
+  .cta-row {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+
+  .cta,
+  .learn {
+    width: 100%;
+
+    max-width: 360px;
+
+    min-width: 0;
+
+    padding:
+      13px
+      20px;
+
+    font-size: 1rem;
+  }
+
+
+  .hero-image {
+    width: 100%;
+  }
+
+
+  .hero-image img {
+    width: 100%;
+
+    max-width: 380px;
+
+    border-radius: 16px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .hero {
+    padding:
+      2rem
+      1rem
+      2.5rem;
+  }
+
+
+  .title {
+    font-size: 2.15rem;
+  }
+
+
+  .subtitle {
+    font-size: 0.92rem;
+  }
+
+
+  .cta,
+  .learn {
+    max-width: 100%;
+
+    padding:
+      12px
+      18px;
+
+    font-size: 0.95rem;
+  }
+
+
+  .hero-image img {
+    border-radius: 14px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 320px) {
+
+  .title {
+    font-size: 1.9rem;
+  }
+
+
+  .subtitle {
+    font-size: 0.88rem;
+  }
+
+
+  .cta,
+  .learn {
+    font-size: 0.9rem;
+  }
+
+}

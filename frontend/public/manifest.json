@@ -1,0 +1,15 @@
+{
+  "short_name": "DailyCode",
+  "name": "DailyCode - Online Coding Platform",
+  "icons": [
+    {
+      "src": "logo-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#080d1b",
+  "background_color": "#080d1b"
+}
